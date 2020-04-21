@@ -5,8 +5,68 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Quản Lý Thư Viện LMS" Height="600" Width="700" ResizeMode="CanMinimize"
+        Loaded="Window_Loaded">
+    <DockPanel Background="#FFDDDDDD" >
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File" >
+                <MenuItem Command="Open"/>
+                <MenuItem Command="Save"/>
+                <MenuItem Header="_Exit" Click="FileExit_Click" />
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About..." Click="HelpAbout_Click" />
+            </MenuItem>
+        </Menu>
+        <Border>
+            <TabControl x:Name="TabMenu" >
+                <TabItem>
+                    <TabItem.Header>
+                        <Label Height="16" Content="Sách" Padding="0"/>
+                    </TabItem.Header>
+                    <Canvas x:Name="mainCanvas">
+                        <TextBox Height="24" Width="386" Canvas.Top="10" Canvas.Left="5"
+                     TextWrapping="Wrap" Padding="0,3,0,0" FontSize="14" BorderBrush="#FF707070"/>
+                        <Button x:Name="searchButton" Height="24" Canvas.Left="400" Canvas.Top="10" Width="60">
+                            <Grid>
+                                <Label Content="Tìm" Grid.Column="0" Padding="0"/>
+                            </Grid>
+                        </Button>
+                        <Button x:Name="addButton" Height="24" Canvas.Left="470" Canvas.Top="10" Width="60">
+                            <Grid>
+                                <Label Content="Thêm" Grid.Column="0" Padding="0"/>
+                            </Grid>
+                        </Button>
+                        <Button x:Name="editButton" Height="24" Canvas.Left="540" Canvas.Top="10" Width="60">
+                            <Grid>
+                                <Label Content="Sửa" Grid.Column="0" Padding="0"/>
+                            </Grid>
+                        </Button>
+                        <Button x:Name="deleteButton" Height="24" Canvas.Left="610" Canvas.Top="10" Width="60">
+                            <Grid>
+                                <Label Content="Xóa" Grid.Column="0" Padding="0"/>
+                            </Grid>
+                        </Button>
+
+                        <ListView x:Name="listViewBooks" Canvas.Top="42" Canvas.Left="5"
+                                  Height="474" Width="666" SelectionMode="Single"
+                                  MouseDoubleClick="ListViewBooks_MouseDoubleClick">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Header="Mã Sách" Width="60"/>
+                                    <GridViewColumn Header="Tên Sách" Width="200"/>
+                                    <GridViewColumn Header="Thể loại" Width="100"/>
+                                    <GridViewColumn Header="Tác giả" Width="100"/>
+                                    <GridViewColumn Header="NXB" Width="80"/>
+                                    <GridViewColumn Header="Năm XB" Width="50"/>
+                                    <GridViewColumn Header="Giá trị" Width="70"/>
+                                </GridView>
+                            </ListView.View>
+                            
+                        </ListView>
+                    </Canvas>
+                </TabItem>
+            </TabControl>
+        </Border>
+    </DockPanel>
 </Window>

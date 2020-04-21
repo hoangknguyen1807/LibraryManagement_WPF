@@ -24,5 +24,29 @@ namespace LibraryManagementApp
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        /* Menu Items Actions*/
+        private void FileExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void HelpAbout_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show(this,
+                "Nguyễn Khánh Hoàng - 1712457",
+                "About Me");
+        }
+
+        private void ListViewBooks_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        
     }
 }

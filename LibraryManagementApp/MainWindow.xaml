@@ -32,7 +32,8 @@
                                 <Label Content="Tìm" Grid.Column="0" Padding="0"/>
                             </Grid>
                         </Button>
-                        <Button x:Name="addButton" Height="24" Canvas.Left="470" Canvas.Top="10" Width="60">
+                        <Button x:Name="addButton" Height="24" Canvas.Left="470" Canvas.Top="10" Width="60"
+                                Click="AddButton_Click">
                             <Grid>
                                 <Label Content="Thêm" Grid.Column="0" Padding="0"/>
                             </Grid>
@@ -53,13 +54,13 @@
                                   MouseDoubleClick="ListViewBooks_MouseDoubleClick">
                             <ListView.View>
                                 <GridView>
-                                    <GridViewColumn Header="Mã Sách" Width="60"/>
-                                    <GridViewColumn Header="Tên Sách" Width="200"/>
-                                    <GridViewColumn Header="Thể loại" Width="100"/>
-                                    <GridViewColumn Header="Tác giả" Width="100"/>
-                                    <GridViewColumn Header="NXB" Width="80"/>
-                                    <GridViewColumn Header="Năm XB" Width="50"/>
-                                    <GridViewColumn Header="Giá trị" Width="70"/>
+                                    <GridViewColumn Header="Mã Sách" Width="60" DisplayMemberBinding="{Binding ID}"/>
+                                    <GridViewColumn Header="Tên Sách" Width="200" DisplayMemberBinding="{Binding Name}"/>
+                                    <GridViewColumn Header="Thể loại" Width="100" DisplayMemberBinding="{Binding Category}"/>
+                                    <GridViewColumn Header="Tác giả" Width="100" DisplayMemberBinding="{Binding Author}"/>
+                                    <GridViewColumn Header="NXB" Width="80" DisplayMemberBinding="{Binding Publisher}"/>
+                                    <GridViewColumn Header="Năm XB" Width="50" DisplayMemberBinding="{Binding YearPublished}"/>
+                                    <GridViewColumn Header="Giá trị" Width="70" DisplayMemberBinding="{Binding Price}"/>
                                 </GridView>
                             </ListView.View>
                             

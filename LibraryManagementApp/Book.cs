@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementApp
 {
-    class Book
+    public class Book
     {
         public int ID { get; set; }
         public string Name { get; set; }
@@ -15,5 +15,6 @@ namespace LibraryManagementApp
         public string Publisher { get; set; }
         public int YearPublished { get; set; }
         public int Price { get; set; }
+        public string ISBN { get; set; }
     }
 }

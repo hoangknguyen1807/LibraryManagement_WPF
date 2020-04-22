@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LibraryManagementApp"
         mc:Ignorable="d"
-        Title="Quản Lý Thư Viện LMS" Height="600" Width="700" ResizeMode="CanMinimize"
-        Loaded="Window_Loaded">
+        Title="Quản Lý Thư Viện LMS" Height="600" Width="850" ResizeMode="CanMinimize"
+        Icon="dictionary.ico"  Loaded="Window_Loaded" Closing="Window_Closing">
     <DockPanel Background="#FFDDDDDD" >
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File" >
@@ -43,14 +43,19 @@
                                 <Label Content="Sửa" Grid.Column="0" Padding="0"/>
                             </Grid>
                         </Button>
-                        <Button x:Name="deleteButton" Height="24" Canvas.Left="610" Canvas.Top="10" Width="60">
+                        <Button x:Name="deleteButton" Height="24" Canvas.Left="610" Canvas.Top="10" Width="60" Click="DeleteButton_Click">
                             <Grid>
                                 <Label Content="Xóa" Grid.Column="0" Padding="0"/>
                             </Grid>
                         </Button>
+                        <Button x:Name="refreshButton" Height="24" Canvas.Right="14" Canvas.Top="10" Width="60" Click="RefreshButton_Click">
+                            <Grid>
+                                <Label Content="Làm mới" Grid.Column="0" Padding="0"/>
+                            </Grid>
+                        </Button>
 
                         <ListView x:Name="listViewBooks" Canvas.Top="42" Canvas.Left="5"
-                                  Height="474" Width="666" SelectionMode="Single"
+                                  Height="474" Width="820" SelectionMode="Single"
                                   MouseDoubleClick="ListViewBooks_MouseDoubleClick">
                             <ListView.View>
                                 <GridView>
@@ -61,6 +66,7 @@
                                     <GridViewColumn Header="NXB" Width="80" DisplayMemberBinding="{Binding Publisher}"/>
                                     <GridViewColumn Header="Năm XB" Width="50" DisplayMemberBinding="{Binding YearPublished}"/>
                                     <GridViewColumn Header="Giá trị" Width="70" DisplayMemberBinding="{Binding Price}"/>
+                                    <GridViewColumn Header="ISBN" Width="160" DisplayMemberBinding="{Binding ISBN}"/>
                                 </GridView>
                             </ListView.View>
                             

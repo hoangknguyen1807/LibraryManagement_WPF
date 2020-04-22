@@ -48,10 +48,8 @@
                                 <Label Content="Xóa" Grid.Column="0" Padding="0"/>
                             </Grid>
                         </Button>
-                        <Button x:Name="refreshButton" Height="24" Canvas.Right="14" Canvas.Top="10" Width="60" Click="RefreshButton_Click">
-                            <Grid>
-                                <Label Content="Làm mới" Grid.Column="0" Padding="0"/>
-                            </Grid>
+                        <Button x:Name="refreshButton" Height="24" Canvas.Right="14" Canvas.Top="10" Width="auto" Click="RefreshButton_Click">
+                            <Label Content="Làm mới danh sách" Grid.Column="0" Padding="2,0"/>
                         </Button>
 
                         <ListView x:Name="listViewBooks" Canvas.Top="42" Canvas.Left="5"

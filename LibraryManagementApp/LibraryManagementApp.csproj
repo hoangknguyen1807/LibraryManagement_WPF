@@ -112,5 +112,8 @@
   <ItemGroup>
     <Resource Include="dictionary.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="scripts\LibraryManagement.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

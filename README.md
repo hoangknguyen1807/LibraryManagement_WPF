@@ -8,7 +8,7 @@ Hiện tại ứng dụng chỉ mới hỗ trợ các chức năng quản lý s�
 1.  Xem danh sách tất cả các cuốn sách của thư viện
 2.  Thêm sách mới
 3.  Xóa thông tin sách
-4.  Sửa thông tin sách (đang phát triển)
+4.  Chỉnh sửa thông tin sách (đang phát triển)
 5.  Tìm kiếm sách (đang phát triển)
 6.  Làm mới danh sách
 

@@ -13,7 +13,7 @@ Hiện tại ứng dụng chỉ mới hỗ trợ các chức năng quản lý s�
 6.  Làm mới danh sách
 
 ## Xây dựng cơ sở dữ liệu cho ứng dụng
-Vào folder **LibraryManagementApp\scripts**, mở file **LibraryManagement.sql** bằng *SQL Server Management Studio* rồi chọn tất cả mã trong đó và thực thi.
+Vào folder **LibraryManagementApp\scripts**, mở file **LibraryManagement.sql** bằng *SQL Server Management Studio*, kết nối tới Server **localhost** với Server Type : `Database Engine`, Authentication : `Windows Authentication`, rồi thực thi tất cả mã SQL trong file script này.
 ## Chạy chương trình
 Để chạy chương trình ta vào folder **LibraryManagementApp\bin\Release** và chạy file **LibraryManagementApp.exe**.
 Hoặc, mở project với Visual Studio bằng cách mở file **LibraryManagementApp.sln**.

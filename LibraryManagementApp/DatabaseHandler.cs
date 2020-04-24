@@ -13,7 +13,7 @@ namespace LibraryManagementApp
 
         //chuoi connect voi database --- "Data Source": ten may tinh; "Initial Catalog": ten db
 
-        static string connection_string = "Data Source=LENOVO-YOGA-520;Initial Catalog=Library;User ID=sa;Password=123;Integrated Security=True";
+        static string connection_string = "Data Source=localhost;Initial Catalog=Library;Integrated Security=True";
 
         public SqlConnection connection;
 
